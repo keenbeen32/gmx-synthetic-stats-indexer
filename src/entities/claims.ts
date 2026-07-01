@@ -33,8 +33,8 @@ export async function saveClaimActionOnOrderCreated(
   marketAddresses.push(marketAddress);
   claimAction.marketAddresses = marketAddresses;
 
-  let isLongOrders = (claimAction.isLongOrders as boolean[]).slice();
-  isLongOrders.push(eventData.getBoolItem("isLong"));
+  let isLongOrders = (claimAction.isLongOrders as string[]).slice();
+  isLongOrders.push(String(eventData.getBoolItem("isLong")));
   claimAction.isLongOrders = isLongOrders;
 
   context.ClaimAction.set(claimAction);
@@ -59,8 +59,8 @@ export async function saveClaimActionOnOrderCancelled(
   marketAddresses.push(order.marketAddress);
   claimAction.marketAddresses = marketAddresses;
 
-  let isLongOrders = (claimAction.isLongOrders as boolean[]).slice();
-  isLongOrders.push(order.isLong);
+  let isLongOrders = (claimAction.isLongOrders as string[]).slice();
+  isLongOrders.push(String(order.isLong));
   claimAction.isLongOrders = isLongOrders;
 
   context.ClaimAction.set(claimAction);
@@ -113,11 +113,11 @@ export async function saveClaimActionOnOrderExecuted(
 
   let tokensCount = claimableFundingFeeInfo.tokenAddresses.length;
   let marketAddresses = claimAction.marketAddresses.slice();
-  let isLongOrders = (claimAction.isLongOrders as boolean[]).slice();
+  let isLongOrders = (claimAction.isLongOrders as string[]).slice();
 
   for (let i = 0; i < tokensCount; i++) {
     marketAddresses.push(order.marketAddress);
-    isLongOrders.push(order.isLong);
+    isLongOrders.push(String(order.isLong));
   }
 
   claimAction.marketAddresses = marketAddresses;

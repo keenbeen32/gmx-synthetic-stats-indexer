@@ -324,8 +324,8 @@ type ClaimAction {
   tokenAddresses: [String!]!
   tokenPrices: [BigInt!]!
   amounts: [BigInt!]!
-  # Envio: boolean arrays are unsupported; stored as a JSON array of booleans to preserve values
-  isLongOrders: Json!
+  # Envio: boolean arrays ([Boolean!]) are unsupported; stored as a string array of "true"/"false" to preserve values as a queryable array
+  isLongOrders: [String!]!
   transaction: Transaction!
 }
 
