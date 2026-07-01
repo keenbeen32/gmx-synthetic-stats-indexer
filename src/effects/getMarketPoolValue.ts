@@ -1,7 +1,7 @@
 // Ported from gmx-subgraph/synthetics-stats/src/contracts/getMarketPoolValueFromContract.ts
 // Reader.getMarketTokenPrice(...) via the Effect API (viem readContract at the event's block).
 // Returns poolValue (output struct field), or 0n if the call reverts (matches subgraph fallback).
-
+ 
 import { createEffect, S } from "envio";
 import { getClient, effectRateLimit } from "./client";
 import { getReaderContractConfigByChainId } from "../contracts/readerConfigs";
