@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
-name: synthetics-stats-hyperindex
+name: synthetics-stats-hyperindex 
 
 # Transaction fields needed by getOrCreateTransaction() and the SellUSDG handler.
 # Block number/timestamp/hash are selected by default.
