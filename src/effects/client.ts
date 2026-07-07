@@ -9,7 +9,6 @@ const rpcUrlByChainId: Record<number, string> = {
   43114: process.env.ENVIO_RPC_URL_43114 ?? "https://api.avax.network/ext/bc/C/rpc",
   43113: process.env.ENVIO_RPC_URL_43113 ?? "https://api.avax-test.network/ext/bc/C/rpc",
   421613: process.env.ENVIO_RPC_URL_421613 ?? "https://goerli-rollup.arbitrum.io/rpc",
-  3637: process.env.ENVIO_RPC_URL_3637 ?? "https://rpc.botanixlabs.com",
   4326: process.env.ENVIO_RPC_URL_4326 ?? "https://mainnet.megaeth.com/rpc",
 };
 

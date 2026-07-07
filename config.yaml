@@ -121,21 +121,9 @@ chains:
         address:
           - "0x0000000000000000000000000000000000000001"
 
-  # botanix-mainnet (no HyperSync — RPC is primary data source) — skipped for now
-  - id: 3637
-    skip: true
-    start_block: 117907
-    rpc: https://rpc.botanixlabs.com
-    contracts:
-      - name: EventEmitter
-        address:
-          - "0xAf2E131d483cedE068e21a9228aD91E623a989C2"
-
-  # megaeth-mainnet (no HyperSync — RPC is primary data source) — skipped for now
+  # megaeth-mainnet (uses HyperSync)
   - id: 4326
-    skip: true
     start_block: 5661063
-    rpc: https://mainnet.megaeth.com/rpc
     contracts:
       - name: EventEmitter
         address:
