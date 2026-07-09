@@ -126,7 +126,7 @@ export async function saveSwapExecutedTradeAction(
   let swapPath = order.swapPath;
 
   let swapInfo = null;
-  if (swapPath != null && swapPath.length > 0) {
+  if (swapPath.length > 0) {
     let lastSwapAddress = swapPath[swapPath.length - 1]!;
     let swapInfoId = `${chainId}-${getSwapInfoId(orderKey, lastSwapAddress, transaction)}`;
     swapInfo = await context.SwapInfo.get(swapInfoId);
