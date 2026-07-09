@@ -37,7 +37,7 @@ type Order {
   receiver: String!
   callbackContract: String!
   marketAddress: String!
-  swapPath: [String!]
+  swapPath: [String!]!
   initialCollateralTokenAddress: String!
 
   sizeDeltaUsd: BigInt!
@@ -258,7 +258,7 @@ type TradeAction {
 
   account: String!
   marketAddress: String
-  swapPath: [String!]
+  swapPath: [String!]!
   initialCollateralTokenAddress: String!
   initialCollateralDeltaAmount: BigInt!
 
