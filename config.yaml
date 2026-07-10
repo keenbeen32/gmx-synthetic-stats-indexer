@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
 name: synthetics-stats-hyperindex
- 
+
 # Entities are mirrored into ClickHouse alongside Postgres. Postgres stays primary:
 # handlers read entity state from it and Hasura serves GraphQL from it. `default: true`
 # on both backends routes every entity to both without per-entity @storage directives.
