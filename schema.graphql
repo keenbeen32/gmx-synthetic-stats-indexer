@@ -473,7 +473,7 @@ type LiquidityProviderIncentivesStat {
   lastTokensBalance: BigInt!
   cumulativeTimeByTokensBalance: BigInt!
   weightedAverageTokensBalance: BigInt!
-}
+} 
 
 type IncentivesStat {
   # used for incentives program
