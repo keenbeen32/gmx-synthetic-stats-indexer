@@ -26,4 +26,4 @@ indexer.onEvent({ contract: "GlvToken", event: "Transfer" }, async ({ event, con
     await saveLiquidityProviderIncentivesStat(to, glvAddress, "Glv", "1w", value, event.block.timestamp, chainId, context);
     await saveLiquidityProviderInfo(to, glvAddress, "Glv", value, chainId, context);
   }
-});
+}); 
