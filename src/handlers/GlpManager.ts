@@ -26,7 +26,7 @@ indexer.onEvent({ contract: "GlpManager", event: "RemoveLiquidity" }, async ({ e
       `SellUSDG entity incorrect log index: expected ${expectedLogIndex.toString()} got ${sellUsdgEntity.logIndex.toString()}`
     );
     throw new Error("SellUSDG entity tx hashes don't match");
-  }
+  } 
 
   await saveUserGlpGmMigrationStatGlpData(
     event.params.account.toLowerCase(),
